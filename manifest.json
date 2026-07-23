@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Умный дом",
+  "description": "Открывает yandex.ru/iot в компактном окне расширения.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Умный дом",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["declarativeNetRequestWithHostAccess"],
+  "host_permissions": [
+    "https://yandex.ru/*",
+    "https://*.yandex.ru/*",
+    "https://yandex.com/*",
+    "https://*.yandex.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://yandex.ru/iot*", "https://yandex.com/iot*"],
+      "js": ["content/tweak.js"],
+      "css": ["content/tweak.css"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content/tweak.css"],
+      "matches": ["https://yandex.ru/*", "https://yandex.com/*"]
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "unwrap_iframe",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}

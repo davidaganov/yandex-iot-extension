@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "content-security-policy", "operation": "remove" },
+        { "header": "content-security-policy-report-only", "operation": "remove" },
+        { "header": "x-frame-options", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||yandex.ru^",
+      "resourceTypes": ["sub_frame", "main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "content-security-policy", "operation": "remove" },
+        { "header": "content-security-policy-report-only", "operation": "remove" },
+        { "header": "x-frame-options", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||yandex.com^",
+      "resourceTypes": ["sub_frame", "main_frame"]
+    }
+  }
+]

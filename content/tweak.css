@@ -1,0 +1,79 @@
+.home-household-layout-iot {
+  --home__header-height: 0px !important;
+  --home__header-activity-bar-height: 0px !important;
+}
+
+.home-household-layout-iot__head,
+.home-household-layout-iot__head-background,
+.home-household-layout-iot__promo-shutter,
+.home-household-layout-iot__head-visibility-marker,
+.home-adfox-banner {
+  display: none !important;
+}
+
+.home-activity-bar-novelty-button {
+  display: none !important;
+}
+
+.home-tabbar__alice-button,
+.home-tabbar-alice-button,
+#home-tabbar___home-tabbar_id_catalog,
+#home-tabbar___home-tabbar_id_stories {
+  display: none !important;
+}
+
+.home-tabbar__tabs {
+  justify-content: space-evenly !important;
+}
+
+.home-filters,
+.home-filters .home-filters__filters,
+.home-filters .horizontal-wrapper {
+  overscroll-behavior-x: contain;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.home-filters.iot-ext-dragging,
+.home-filters.iot-ext-dragging * {
+  cursor: grabbing !important;
+}
+
+.iot-ext-header-actions {
+  display: flex;
+  align-items: center;
+  margin-inline-start: auto;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.iot-ext-header-actions [data-iot-ext-proxy] {
+  flex-shrink: 0;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  max-width: 40px !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.iot-ext-header-actions [data-iot-ext-proxy] .icon {
+  --icon-size: 1.5rem !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+.bottom-sheet__container {
+  padding-top: 24px !important;
+}
+
+.ssr-bottom-sheet__container {
+  padding-top: 24px !important;
+  box-sizing: border-box;
+}
