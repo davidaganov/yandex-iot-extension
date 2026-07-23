@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Умный дом (compact UI)
+// @name         Умный дом 
 // @namespace    yandex-iot-compact
 // @version      1.0.0
-// @description  Компактный UI для yandex.ru/iot — те же правки, что в браузерном расширении из этого репозитория. Не связано с Яндексом.
+// @description  Компактный UI для yandex.ru/iot
 // @author       yandex-iot
 // @match        https://yandex.ru/iot*
 // @match        https://yandex.com/iot*
