@@ -35,12 +35,6 @@
       "all_frames": true
     }
   ],
-  "web_accessible_resources": [
-    {
-      "resources": ["content/tweak.css"],
-      "matches": ["https://yandex.ru/*", "https://yandex.com/*"]
-    }
-  ],
   "declarative_net_request": {
     "rule_resources": [
       {

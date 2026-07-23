@@ -7,7 +7,32 @@
 .home-household-layout-iot__head-background,
 .home-household-layout-iot__promo-shutter,
 .home-household-layout-iot__head-visibility-marker,
-.home-adfox-banner {
+.home-adfox-banner,
+.home-adfox-banner__banner,
+.iot-news-notifications-carousel,
+.iot-news-notification,
+.iot-news-notifications__item,
+.iot-news-promo-section,
+.iot-news-promo-section__stack,
+.iot-news-all__anchor,
+.iot-news-all-categories,
+.iot-news-all__tab-wrapper,
+.promo__stories,
+.promo-tile,
+.story-tile,
+.story-promo-tile,
+.stories-promo__item,
+.stories-grid,
+.stories-grid2,
+.stories-grid__item,
+.stories-grid2__item,
+.stories-grid__cell,
+.stories-grid__row,
+.story-modal,
+.alice-pro-banner,
+.alice-pro-gifts-notification,
+.alice-personalized-notification,
+.in-app-notifications-stack {
   display: none !important;
 }
 
@@ -15,15 +40,30 @@
   display: none !important;
 }
 
-.home-tabbar__alice-button,
-.home-tabbar-alice-button,
+html.iot-ext-hide-alice .home-tabbar__alice-button,
+html.iot-ext-hide-alice .home-tabbar-alice-button,
 #home-tabbar___home-tabbar_id_catalog,
 #home-tabbar___home-tabbar_id_stories {
   display: none !important;
 }
 
 .home-tabbar__tabs {
+  display: flex !important;
   justify-content: space-evenly !important;
+  align-items: stretch !important;
+}
+
+#home-tabbar___home-tabbar_id_household {
+  order: 1;
+}
+
+.home-tabbar__alice-button,
+.home-tabbar-alice-button {
+  order: 2;
+}
+
+#home-tabbar___home-tabbar_id_scenarios {
+  order: 3;
 }
 
 .home-filters,
@@ -48,7 +88,8 @@
   flex-shrink: 0;
 }
 
-.iot-ext-header-actions [data-iot-ext-proxy] {
+.iot-ext-header-actions [data-iot-ext-proxy],
+.iot-ext-header-actions [data-iot-ext-alice-toggle] {
   flex-shrink: 0;
   width: 40px !important;
   height: 40px !important;
@@ -63,10 +104,19 @@
   background: transparent !important;
 }
 
-.iot-ext-header-actions [data-iot-ext-proxy] .icon {
+.iot-ext-header-actions [data-iot-ext-proxy] .icon,
+.iot-ext-header-actions [data-iot-ext-alice-toggle] .icon {
   --icon-size: 1.5rem !important;
   width: 1.5rem !important;
   height: 1.5rem !important;
+}
+
+.iot-ext-header-actions [data-iot-ext-alice-toggle][aria-pressed="false"] {
+  opacity: 0.35;
+}
+
+.iot-ext-header-actions [data-iot-ext-alice-toggle][aria-pressed="true"] {
+  opacity: 1;
 }
 
 .bottom-sheet__container {

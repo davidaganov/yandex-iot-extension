@@ -1,3 +1,25 @@
+// ==UserScript==
+// @name         Умный дом (compact UI)
+// @namespace    yandex-iot-compact
+// @version      1.0.0
+// @description  Компактный UI для yandex.ru/iot — те же правки, что в браузерном расширении из этого репозитория. Не связано с Яндексом.
+// @author       yandex-iot
+// @match        https://yandex.ru/iot*
+// @match        https://yandex.com/iot*
+// @run-at       document-start
+// @grant        none
+// ==/UserScript==
+
+;(() => {
+  const STYLE_ID = "yandex-iot-extension-tweaks"
+  if (!document.getElementById(STYLE_ID)) {
+    const style = document.createElement("style")
+    style.id = STYLE_ID
+    style.textContent = ".home-household-layout-iot {\n  --home__header-height: 0px !important;\n  --home__header-activity-bar-height: 0px !important;\n}\n\n.home-household-layout-iot__head,\n.home-household-layout-iot__head-background,\n.home-household-layout-iot__promo-shutter,\n.home-household-layout-iot__head-visibility-marker,\n.home-adfox-banner,\n.home-adfox-banner__banner,\n.iot-news-notifications-carousel,\n.iot-news-notification,\n.iot-news-notifications__item,\n.iot-news-promo-section,\n.iot-news-promo-section__stack,\n.iot-news-all__anchor,\n.iot-news-all-categories,\n.iot-news-all__tab-wrapper,\n.promo__stories,\n.promo-tile,\n.story-tile,\n.story-promo-tile,\n.stories-promo__item,\n.stories-grid,\n.stories-grid2,\n.stories-grid__item,\n.stories-grid2__item,\n.stories-grid__cell,\n.stories-grid__row,\n.story-modal,\n.alice-pro-banner,\n.alice-pro-gifts-notification,\n.alice-personalized-notification,\n.in-app-notifications-stack {\n  display: none !important;\n}\n\n.home-activity-bar-novelty-button {\n  display: none !important;\n}\n\nhtml.iot-ext-hide-alice .home-tabbar__alice-button,\nhtml.iot-ext-hide-alice .home-tabbar-alice-button,\n#home-tabbar___home-tabbar_id_catalog,\n#home-tabbar___home-tabbar_id_stories {\n  display: none !important;\n}\n\n.home-tabbar__tabs {\n  display: flex !important;\n  justify-content: space-evenly !important;\n  align-items: stretch !important;\n}\n\n#home-tabbar___home-tabbar_id_household {\n  order: 1;\n}\n\n.home-tabbar__alice-button,\n.home-tabbar-alice-button {\n  order: 2;\n}\n\n#home-tabbar___home-tabbar_id_scenarios {\n  order: 3;\n}\n\n.home-filters,\n.home-filters .home-filters__filters,\n.home-filters .horizontal-wrapper {\n  overscroll-behavior-x: contain;\n  cursor: grab;\n  user-select: none;\n  -webkit-user-select: none;\n}\n\n.home-filters.iot-ext-dragging,\n.home-filters.iot-ext-dragging * {\n  cursor: grabbing !important;\n}\n\n.iot-ext-header-actions {\n  display: flex;\n  align-items: center;\n  margin-inline-start: auto;\n  gap: 0;\n  flex-shrink: 0;\n}\n\n.iot-ext-header-actions [data-iot-ext-proxy],\n.iot-ext-header-actions [data-iot-ext-alice-toggle] {\n  flex-shrink: 0;\n  width: 40px !important;\n  height: 40px !important;\n  min-width: 40px !important;\n  max-width: 40px !important;\n  padding: 8px !important;\n  box-sizing: border-box !important;\n  display: inline-flex !important;\n  align-items: center !important;\n  justify-content: center !important;\n  border-radius: 0 !important;\n  background: transparent !important;\n}\n\n.iot-ext-header-actions [data-iot-ext-proxy] .icon,\n.iot-ext-header-actions [data-iot-ext-alice-toggle] .icon {\n  --icon-size: 1.5rem !important;\n  width: 1.5rem !important;\n  height: 1.5rem !important;\n}\n\n.iot-ext-header-actions [data-iot-ext-alice-toggle][aria-pressed=\"false\"] {\n  opacity: 0.35;\n}\n\n.iot-ext-header-actions [data-iot-ext-alice-toggle][aria-pressed=\"true\"] {\n  opacity: 1;\n}\n\n.bottom-sheet__container {\n  padding-top: 24px !important;\n}\n\n.ssr-bottom-sheet__container {\n  padding-top: 24px !important;\n  box-sizing: border-box;\n}\n"
+    ;(document.documentElement || document.head || document.body)?.appendChild(style)
+  }
+})()
+
 ;(() => {
   const LABELS = ["Будильники", "История событий"]
   const ALICE_STORAGE_KEY = "yandex-iot-compact.showAlice"
