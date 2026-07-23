@@ -1,9 +1,15 @@
 // ==UserScript==
-// @name         Умный дом 
-// @namespace    yandex-iot-compact
+// @name         Умный дом
+// @namespace    https://github.com/davidaganov/yandex-iot-extension
 // @version      1.0.0
-// @description  Компактный UI для yandex.ru/iot
-// @author       yandex-iot
+// @description  Компактный UI для yandex.ru/iot.
+// @author       davidaganov
+// @license      MIT
+// @homepageURL  https://github.com/davidaganov/yandex-iot-extension
+// @supportURL   https://github.com/davidaganov/yandex-iot-extension/issues
+// @icon         https://raw.githubusercontent.com/davidaganov/yandex-iot-extension/main/icons/icon128.png
+// @downloadURL  https://raw.githubusercontent.com/davidaganov/yandex-iot-extension/main/userscript/yandex-iot.user.js
+// @updateURL    https://raw.githubusercontent.com/davidaganov/yandex-iot-extension/main/userscript/yandex-iot.user.js
 // @match        https://yandex.ru/iot*
 // @match        https://yandex.com/iot*
 // @run-at       document-start

@@ -14,18 +14,11 @@
 
 ## Tampermonkey
 
-Файл: [`userscript/yandex-iot.user.js`](userscript/yandex-iot.user.js)
+Установка с [Greasy Fork](https://greasyfork.org/ru/scripts/588253-%D1%83%D0%BC%D0%BD%D1%8B%D0%B9-%D0%B4%D0%BE%D0%BC) или из репозитория: [`userscript/yandex-iot.user.js`](userscript/yandex-iot.user.js).
 
 1. Установите [Tampermonkey](https://www.tampermonkey.net).
-2. Откройте `userscript/yandex-iot.user.js`.
-3. Подтвердите установку.
-4. Зайдите на [yandex.ru/iot](https://yandex.ru/iot).
-
-Логика для расширения и скрипта одна: `content/tweak.js` + `content/tweak.css`. Скрипт для [Tampermonkey](https://www.tampermonkey.net) **собирается** из них:
-
-```bash
-node scripts/build-userscript.js
-```
+2. Откройте страницу скрипта на Greasy Fork и нажмите **Установить**.
+3. Зайдите на [yandex.ru/iot](https://yandex.ru/iot).
 
 ## Что меняется на странице
 
@@ -44,6 +37,7 @@ node scripts/build-userscript.js
 | `content/tweak.js` / `tweak.css` | Общие правки UI         |
 | `userscript/yandex-iot.user.js`  | Скрипт для Tampermonkey |
 | `scripts/build-userscript.js`    | Сборка userscript       |
+| `LICENSE`                        | MIT                     |
 | `icons/`                         | Иконки                  |
 
 ## Лицензия
